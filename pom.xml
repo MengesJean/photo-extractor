@@ -10,12 +10,14 @@
     <name>Photo Extractor</name>
 
     <properties>
-        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javafx.version>21.0.5</javafx.version>
+        <javafx.version>25.0.5</javafx.version>
         <javacv.version>1.5.11</javacv.version>
         <ffmpeg.version>7.1-1.5.11</ffmpeg.version>
         <javacpp.platform>macosx-arm64</javacpp.platform>
+        <!-- JavaCPP (classpath) loads the FFmpeg libraries: Java 24+ asks for explicit native access. -->
+        <native.access>--enable-native-access=ALL-UNNAMED</native.access>
     </properties>
 
     <dependencies>
@@ -62,6 +64,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
+                <configuration>
+                    <argLine>${native.access}</argLine>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.openjfx</groupId>
@@ -69,6 +74,10 @@
                 <version>0.0.8</version>
                 <configuration>
                     <mainClass>fr.photoextractor.App</mainClass>
+                    <options>
+                        <option>${native.access}</option>
+                        <option>--enable-native-access=javafx.graphics</option>
+                    </options>
                 </configuration>
             </plugin>
         </plugins>

@@ -11,7 +11,7 @@ directement dans Photos.
 ./run.sh
 ```
 
-Prérequis : Java 21 (`/usr/libexec/java_home -v 21`) et Maven (`brew install maven`).
+Prérequis : Java 25 (`/usr/libexec/java_home -v 25`, par ex. Amazon Corretto 25) et Maven (`brew install maven`).
 FFmpeg n'est pas à installer : il est fourni par JavaCV.
 
 Au premier lancement, macOS demande l'autorisation de piloter Photos
@@ -29,7 +29,7 @@ Au premier lancement, macOS demande l'autorisation de piloter Photos
 ## Tests
 
 ```sh
-JAVA_HOME=$(/usr/libexec/java_home -v 21) mvn test
+JAVA_HOME=$(/usr/libexec/java_home -v 25) mvn test
 ```
 
 ## Fonctionnement
