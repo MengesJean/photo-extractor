@@ -1,0 +1,142 @@
+.root {
+    -fx-font-family: "SF Pro Text", "Helvetica Neue", sans-serif;
+    -fx-font-size: 13px;
+    -fx-base: #2b2b2e;
+    -fx-background: #1e1e20;
+    -fx-accent: #0a84ff;
+    -fx-focus-color: #0a84ff;
+    -fx-faint-focus-color: transparent;
+}
+
+.sidebar {
+    -fx-background-color: #252528;
+    -fx-border-color: transparent #3a3a3d transparent transparent;
+}
+
+.sidebar-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f2f2f7;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 7 8 7 8;
+    -fx-background-radius: 6;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #313135;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #0a84ff;
+}
+
+.cell-name {
+    -fx-text-fill: #f2f2f7;
+    -fx-font-weight: bold;
+}
+
+.cell-date {
+    -fx-text-fill: #98989d;
+    -fx-font-size: 11px;
+}
+
+.list-cell:filled:selected .cell-date {
+    -fx-text-fill: #dbe9ff;
+}
+
+.video-pane {
+    -fx-background-color: #000000;
+}
+
+.placeholder {
+    -fx-text-fill: #8e8e93;
+    -fx-font-size: 15px;
+}
+
+.busy-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.busy-overlay .label {
+    -fx-text-fill: #f2f2f7;
+    -fx-text-alignment: center;
+}
+
+.controls {
+    -fx-background-color: #252528;
+    -fx-border-color: #3a3a3d transparent transparent transparent;
+}
+
+.button {
+    -fx-background-radius: 6;
+}
+
+.play-button {
+    -fx-min-width: 44px;
+    -fx-font-weight: bold;
+}
+
+.accent {
+    -fx-base: #0a84ff;
+    -fx-font-weight: bold;
+}
+
+.time {
+    -fx-font-family: "SF Mono", "Menlo", monospace;
+    -fx-text-fill: #d1d1d6;
+}
+
+.status {
+    -fx-text-fill: #98989d;
+    -fx-font-size: 12px;
+}
+
+.icon-button {
+    -fx-font-size: 14px;
+    -fx-padding: 2 8 2 8;
+}
+
+.video-grid .list-cell,
+.video-grid .list-cell:filled:hover,
+.video-grid .list-cell:filled:selected {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 12 0;
+}
+
+.tile {
+    -fx-cursor: hand;
+}
+
+.tile-frame {
+    -fx-background-color: #3a3a3d;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 3;
+}
+
+.tile:hover .tile-frame {
+    -fx-border-color: #5a5a5f;
+}
+
+.tile.selected .tile-frame {
+    -fx-border-color: #0a84ff;
+}
+
+.tile.selected .cell-name {
+    -fx-text-fill: #0a84ff;
+}
+
+.tile-placeholder {
+    -fx-text-fill: #8e8e93;
+    -fx-font-size: 28px;
+}

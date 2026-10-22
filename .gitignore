@@ -1,0 +1,13 @@
+# Build Maven
+target/
+
+# macOS
+.DS_Store
+
+# Rapports de crash de la JVM
+hs_err_pid*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
